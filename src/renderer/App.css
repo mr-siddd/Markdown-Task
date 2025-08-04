@@ -1,0 +1,66 @@
+/* ======== base layout ======== */
+html, body, .app { height: 100%; margin: 0; font-family: system-ui, sans-serif; }
+.app { display: flex; flex-direction: column; }
+
+/* ======== header ======== */
+.app-header { display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: #0d6efd; color: white; }
+.app-header img { height: 18px; }
+
+/* ======== toolbar ======== */
+.toolbar { display: flex; gap: 6px; padding: 6px 12px; background: #f3f3f3; }
+.toolbar button { padding: 4px 10px; cursor: pointer; }
+.toolbar .spacer { flex: 1; }
+.toggle { display: flex; align-items: center; gap: 4px; }
+
+/* ======== split pane ======== */
+.pane { flex: 1; display: flex; }
+textarea { width: 50%; resize: none; padding: 12px; font-family: monospace; border: none; border-right: 1px solid #ddd; }
+.preview { width: 50%; padding: 12px; overflow: auto; }
+
+/* ======== status bar ======== */
+.status { padding: 4px 12px; font-size: 12px; background: #fafafa; border-top: 1px solid #e0e0e0; }
+
+/* ======== dark-mode overrides ======== */
+.dark .app-header { background: #222; }
+.dark .toolbar { background: #333; }
+.dark textarea { background: #1e1e1e; color: #f3f3f3; border-right: 1px solid #444; }
+.dark .preview { background: #252526; color: #ddd; }
+.dark .status { background: #1e1e1e; color: #aaa; border-top: 1px solid #444; }
+  
+/* Add to existing App.css */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  background: #0d6efd;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  padding: 4px 8px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
